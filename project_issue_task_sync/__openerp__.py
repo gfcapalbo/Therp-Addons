@@ -14,19 +14,10 @@
         'views/templates.xml',
         'security/ir.model.access.csv',
     ],
-    "qweb": [
-    ],
-    "test": [
-    ],
-    "images": [
-    ],
     "pre_init_hook": False,
     "post_init_hook": False,
     "uninstall_hook": False,
     "auto_install": False,
     "installable": True,
     "application": False,
-    "external_dependencies": {
-        'python': [],
-    },
 }
