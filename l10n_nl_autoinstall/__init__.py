@@ -10,9 +10,7 @@ from openerp.modules.graph import Graph
 def post_init_hook(cr, pool):
     if tools.config['test_enable']:
         # in test mode, remove the modules autoinstalled by account's init hook
-        auto_modules = [
-            'account_plaid', 'account_check_printing', 'l10n_generic_coa',
-        ]
+        auto_modules = []
         env = api.Environment(cr, SUPERUSER_ID, {})
         env['ir.module.module'].search([
             ('name', 'in', auto_modules),
