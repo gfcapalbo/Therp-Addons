@@ -3,6 +3,7 @@
 
     <record id="external_scrum_users" model="res.groups">
         <field name="name">External Users - Scrum</field>
+        <field name="category_id" ref="module_category_external_users"/>
         <field name="is_portal">True</field>
         <field
             name="implied_ids"
@@ -13,6 +14,7 @@
 
     <record id="collaborators_followers" model="res.groups">
         <field name="name">External Users - Scrum Collaborator</field>
+         <field name="category_id" ref="module_category_external_users"/>
         <field name="is_portal">True</field>
         <field
             name="implied_ids"
