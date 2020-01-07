@@ -33,13 +33,23 @@ single merged document.
 
 """
 
+import logging
+
+_logger = logging.getLogger(__name__)
+
 import base64
 from openerp.osv import osv
 from openerp.tools.translate import _
 from openerp.tools.safe_eval import safe_eval
 from openerp.report.report_sxw import rml_parse
-from openerp.addons.report_aeroo.report_aeroo import Aeroo_report
-from openerp.addons.report_aeroo.report_aeroo import AerooPrint
+try:
+    from openerp.addons.report_aeroo.report_aeroo import Aeroo_report
+except ImportError:
+    _logger.info("Importerror for report_aeroo.Aeroo_report")
+try:
+    from openerp.addons.report_aeroo.report_aeroo import AerooPrint
+except ImportError:
+    _logger.info("Importerror for report_aeroo.AerooPrint")
 
 
 class report_xml_duck(object):
