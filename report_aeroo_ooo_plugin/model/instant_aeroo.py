@@ -46,10 +46,12 @@ try:
     from openerp.addons.report_aeroo.report_aeroo import Aeroo_report
 except ImportError:
     _logger.info("Importerror for report_aeroo.Aeroo_report")
+    Aeroo_report = object
 try:
     from openerp.addons.report_aeroo.report_aeroo import AerooPrint
 except ImportError:
     _logger.info("Importerror for report_aeroo.AerooPrint")
+    AerooPrint = object
 
 
 class report_xml_duck(object):
